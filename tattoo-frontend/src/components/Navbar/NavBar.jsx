@@ -1,7 +1,8 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { animated, useSpring } from '@react-spring/web';
+
 
 import images from "../../constants/images";
 
@@ -10,10 +11,16 @@ import "./Navbar.css";
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);
 
+    const fade = useSpring({
+        from: { opacity: 0, marginTop: -400 },
+        to: { opacity: 1, marginTop: 0 },
+        delay: 1000,
+    });
+
     return (
-        <nav className = "app__navbar">
+        <animated.nav style={fade} className = "app__navbar">
             <div className = "app__navbar-logo">
-                <img src = {images.main_logo} alt = "app logo" />
+                {/* <img src = {images.main_logo} alt = "app logo" /> */}
             </div>
             <ul className = "app__navbar-links">
                 <li className = "p__opensans"><a href="#intro">Intro</a></li>
@@ -44,7 +51,7 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-        </nav>
+        </animated.nav>
     );
 };
 export default Navbar;

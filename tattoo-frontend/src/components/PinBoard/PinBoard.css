@@ -1,0 +1,116 @@
+.image-card {
+    transition: transform 0.2s; 
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    position: absolute;
+  }
+
+  .image-card img { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+  .pin-board{
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .masonry-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    flex-wrap: wrap;
+  }
+
+  .masonry-grid_column {
+    flex: 1;
+    box-sizing: border-box;
+    flex-basis: calc(33.333% - 20px);
+  }
+
+  .masonry-grid_column > div {
+    margin-bottom: 20px;
+  }
+
+  .masonry-grid_column img {
+    width: 100%;
+    height: auto;
+  }
+
+  .enlarged-image-overlay {
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.473); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .enlarged-image-overlay img {
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+
+  .enlarged-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    max-height: auto;
+}
+  
+
+.enlarged-image-container img {
+    position: relative;
+    max-width: 100%;
+    max-height: auto;
+}
+.close-enlarged-image {
+    position: absolute;
+    top: 0px;
+    bottom: -600px;
+    right: 0px;
+    left: 0px;
+    font-size: 40px;
+    color: var(--color-studio-cream-light);
+    transition: 0.3s;
+    background: none; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+
+  
+  .close-enlarged-image:hover,
+  .close-enlarged-image:focus {
+    color: var(--color-studio-cream-light);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+    @media screen and (max-width: 650px) {
+    .enlarged-image-overlay img {
+      width: 100%; 
+      object-fit: contain;
+    }}

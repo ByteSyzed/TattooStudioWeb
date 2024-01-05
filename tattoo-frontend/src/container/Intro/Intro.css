@@ -1,0 +1,49 @@
+.app__intro{
+    background-color: var(--color-studio-pink);
+}
+
+.app__intro-h1{
+    font-family: var(--font-base);
+    color: var(--color-studio-cream-light);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 117px;
+    font-size: 75px;
+
+}
+
+@media screen and (max-width: 650px) {
+    .app__intro {
+        padding: 1rem;
+    }
+}
+
+.app__wrapper_img img {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+
+}
+
+.app__wrapper_img {
+    display: flex;
+    overflow-x: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.gallery-image {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.slider{
+    position: relative;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+}

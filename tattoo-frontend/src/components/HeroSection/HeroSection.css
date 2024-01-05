@@ -1,0 +1,54 @@
+.hero-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.masonry-grid {
+    display: flex;
+    width: auto;
+    margin-left: 0px;  
+}
+
+.masonry-grid_column {
+    padding-left: 0px; /* same as the negative margin */
+    background-clip: padding-box;
+}
+
+.masonry-item {
+    margin-bottom: 0px; 
+    width: 100%;
+}
+
+.masonry-item img {
+    width: 50px;  
+    height: 100px; 
+}
+
+.masonry-item.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    background-color: purple;
+    color: white;
+}
+
+.masonry-item.hero-text {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+}
+
+.masonry-item.hero-text h1, .masonry-item.hero-text p {
+    margin: 0;
+}
+
+.masonry-item.hero-text button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

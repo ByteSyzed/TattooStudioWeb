@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--color-studio-blue);
+    background: var(--color-studio-pink);
 
     padding: 1rem 2rem;
 }
